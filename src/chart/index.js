@@ -151,10 +151,10 @@ function init(options) {
     return d3
       .transition()
       .duration(350)
-      .tween('zoom', function() {
+      .tween('zoom', function () {
         var iTranslate = d3.interpolate(zoom.translate(), translate),
           iScale = d3.interpolate(zoom.scale(), scale)
-        return function(t) {
+        return function (t) {
           zoom.scale(iScale(t)).translate(iTranslate(t))
           zoomed()
         }
@@ -166,13 +166,8 @@ function init(options) {
     // Zoom extent to fit svg on the screen
     if (this.id === zoomExtentId) {
       const latestConfig = loadConfig()
-      const {
-        nodeLeftX,
-        nodeRightX,
-        nodeY,
-        elemHeight,
-        elemWidth,
-      } = latestConfig
+      const { nodeLeftX, nodeRightX, nodeY, elemHeight, elemWidth } =
+        latestConfig
 
       const svgWidth = nodeLeftX + nodeRightX
       const svgHeight = nodeY + nodeHeight * 2 + 48
@@ -265,7 +260,7 @@ function init(options) {
   svgContainer.setAttribute('style', 'display:none;')
 
   //appending svg and canvas containers to root
-  const orgChart = document.getElementById('root')
+  const orgChart = document.getElementById('__next')
   orgChart.append(canvasContainer)
   orgChart.append(svgContainer)
 }

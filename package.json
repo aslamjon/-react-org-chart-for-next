@@ -1,5 +1,5 @@
 {
-  "name": "@unicef/react-org-chart",
+  "name": "react-org-chart-for-next",
   "version": "0.3.4",
   "description": "Simple, high-performance react component for d3 org chart",
   "main": "dist/index.js",
@@ -9,10 +9,10 @@
   "files": [
     "dist/index.js"
   ],
-  "homepage": "https://unicef.github.io/react-org-chart",
+  "homepage": "https://aslamjon.github.io/react-org-chart-for-next",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unicef/react-org-chart.git"
+    "url": "git+https://github.com/aslamjon/react-org-chart-for-next.git"
   },
   "scripts": {
     "start": "webpack --watch --mode production",
