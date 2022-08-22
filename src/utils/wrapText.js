@@ -2,22 +2,20 @@ const d3 = require('d3')
 
 // One way of achieving text-wrapping capability in SVG
 module.exports = function wrapText(text, width) {
+  console.log('text', text)
   if (text.length === 0) {
     return ''
   }
 
   let editedClass = ''
 
-  text[0].forEach(textNode => {
+  text[0].forEach((textNode) => {
     const text = d3.select(textNode)
     const x = text.attr('x')
     const y = text.attr('y')
     const dy = parseFloat(text.attr('dy'))
     const lineHeight = 1.1
-    const words = text
-      .text()
-      .split(/\s+/)
-      .reverse()
+    const words = text.text().split(/\s+/).reverse()
 
     let lineNumber = 0
     let word
