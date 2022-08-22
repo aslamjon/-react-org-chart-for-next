@@ -5,6 +5,7 @@ class OrgChart extends PureComponent {
   render() {
     const { id } = this.props
 
+    console.log('OrgChart.render')
     return createElement('div', {
       id,
     })
